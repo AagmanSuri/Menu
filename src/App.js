@@ -5,10 +5,13 @@ import items from "./data";
 
 function App() {
   return (
-    <div>
-      <h2>menu project setup</h2>
-      <Menu />
-    </div>
+    <main>
+      <h2 className="title">Our Menu</h2>
+      <div className="underline"></div>
+      {items.map((menu) => {
+        return <Menu {...menu} />;
+      })}
+    </main>
   );
 }
 
