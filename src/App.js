@@ -8,8 +8,9 @@ function App() {
     <main>
       <h2 className="title">Our Menu</h2>
       <div className="underline"></div>
+
       {items.map((menu) => {
-        return <Menu {...menu} />;
+        return <Menu key={menu.id} {...menu} />;
       })}
     </main>
   );
