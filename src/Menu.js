@@ -6,7 +6,6 @@ const Menu = ({ id, title, category, price, img, desc }) => {
       <div className="menu-item ">
         <h3 className="title">{title}</h3>
         <h3 className="price">{price}</h3>
-
         <img src={img} className="photo" alt={title}></img>
         <p className="item-info">{desc}</p>
       </div>
