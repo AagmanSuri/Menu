@@ -4,12 +4,21 @@ import Categories from "./Categories";
 import items from "./data";
 
 function App() {
+  const [menuItems, setMenuItems] = useState(items);
+
+  const filteredList = (category) => {
+    const newList = items.filter((item) => {
+      return category === item.category;
+    });
+    setMenuItems(newList);
+  };
+
   return (
     <main>
       <h2 className="title">Our Menu</h2>
       <div className="underline"></div>
-
-      {items.map((menu) => {
+      <Categories filteredList={filteredList} />
+      {menuItems.map((menu) => {
         return <Menu key={menu.id} {...menu} />;
       })}
     </main>
