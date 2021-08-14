@@ -8,12 +8,14 @@ const Categories = ({ filteredList, categoryList }) => {
       </button>
       {categoryList.map((category, index) => {
         return (
-          <button
-            className="filter-btn"
-            onClick={() => filteredList(`${category}`)}
-          >
-            {category}
-          </button>
+          <div key={index}>
+            <button
+              className="filter-btn"
+              onClick={() => filteredList(`${category}`)}
+            >
+              {category}
+            </button>
+          </div>
         );
       })}
     </main>
